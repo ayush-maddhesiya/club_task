@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+</head>
+<link rel="stylesheet" href="./output.css">
+<style>
+    body{
+        background-color: #1b1818ce;
+        padding: 0%;
+        margin: 20px;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        grid-template-rows: 300px 100px;
+        grid-gap: 15px;
+        grid-auto-flow: dense;
+    }
+    .gallery-item{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .gallery-item .image{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    
+    .gallery-item .image img{
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        object-fit: cover;
+        object-position: 50% 50%;
+        transition: .5s ease-in-out;
+    }
+    
+    .image{
+        border-radius: 10px ;
+    }
+    .gallery-item:hover .image img{
+        transform: scale(1.3s)
+    }
+    
+    .gallery-item .text{
+        opacity: 0;
+        position: absotule;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        color: antiquewhite;
+        font-size: 30px;
+        transform: translate(-50%,-50%);
+        transition: .3s ease-in-out;
+        backdrop-filter: blur(5px) saturate(1.8);
+    }
+    
+    
+    .gallery-item:hover .text{
+        opacity: 1;
+        width: 70%;
+        animation: move-up .6s  linear;
+        padding: 1em;
+    }
+    
+    .w1{
+        grid-column: span 1;
+    }
+    .w2{
+        grid-column: span 2;
+    }
+    .w3{
+        grid-column: span 3;
+    }
+    .w4{
+        grid-column: span 4;
+    }
+    .w5{
+        grid-column: span 5;
+    }
+    .w6{
+        grid-column: span 6;
+    }
+    .h1{
+        grid-row: span 1;
+    }
+    .h2{
+        grid-row: span 2;
+    }
+    .h3{
+        grid-row: span 3;
+    }
+    .h4{
+        grid-row: span 4;
+    }
+    .h5{
+        grid-row: span 5;
+    }
+    .h6{
+        grid-row: span 6;
+    }   
+    
+    @media (max-width:500px) {
+        .container{
+            grid-template-columns: repeat(1,1fr);
+        }
+        .w1,.w2,.w3,.w4,.w5,.w6{
+            grid-column: span 1 ;
+        }
+    }
+    
+    @keyframes move-down {
+        0%{
+            top:10%
+        }
+        20%{
+            top:30%
+        }
+        50%{
+            top:50%
+        }
+        
+    }
+    
+</style>
+<body class="bg-slate-900">
+
+    <!-- hero section -->
+    <div class="relative">
+        <img src="./about_hero_bg.jpeg" alt="about_hero_bg" class="w-full" />
+        <div class="absolute inset-0 flex items-center justify-center">
+            <p class="text-white text-[50px] font-bold">Portfolio</p>
+
+        </div>
+    </div>
+
+    <!-- intro section -->
+    <div>
+        <div class="p-4 mt-5 ml-8 mb-7">
+            <p class="text-white font-thin">Our Portfolio</p>
+            <p class="text-white text-4xl font-semibold">Some recent work</p>
+        </div>
+    </div>
+
+      
+      
+      <!-- showcase section of project / glimes -->
+        <div class="container">
+            <div class="gallery-container w4 h3">
+                <div class="gallery-item">
+                    <div class="image">
+                        <img src="https://source.unsplash.com/1600x900/?design" alt="Nature">
+                    </div>
+                    <div class="text">Project</div>
+                </div>
+            </div>
+    
+            <div class="gallery-container  w2 h4  ">
+                <div class="gallery-item ">
+                    <div class="image">
+                        <img src="https://source.unsplash.com/1600x900/?logo" alt="Logo">
+                    </div>
+                    <div class="text">Project</div>
+                </div>
+            </div>
+    
+            <div class="gallery-container h2 w2">
+                <div class="gallery-item">
+                    <div class="image">
+                        <img src="https://source.unsplash.com/1600x900/?project" alt="travel">
+                    </div>
+                    <div class="text">Project</div>
+                </div>
+            </div>
+    
+            <div class="gallery-container w2">
+                <div class="gallery-item">
+                    <div class="image">
+                        <img src="https://source.unsplash.com/1600x900/?nature" alt="Nature">
+                    </div>
+                    <div class="text">Project</div>
+                </div>
+            </div>
+    
+            <div class="gallery-container w3 h1">
+                <div class="gallery-item">
+                    <div class="image">
+                        <img src="https://source.unsplash.com/1600x900/?website" alt="website glims">
+                    </div>
+                    <div class="text">Project</div>
+                </div>
+            </div>
+    
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <div class="image">
+                        <img src="https://source.unsplash.com/1600x900/?car" alt="car">
+                    </div>
+                    <div class="text">Project</div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
